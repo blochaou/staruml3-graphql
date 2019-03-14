@@ -1,6 +1,20 @@
 GraphQL Extension for StarUML 3
 ============================
 
+This is a modified version of the original (https://github.com/orefalo/staruml3-graphql) to add a generated directive without
+parameter. You will get for example @unique instead @unique(). Please set the value of your tag to 'empty'.
+
+![](images/--empty-tag.png)
+
+This will genegrated
+
+`
+type Client{
+    id: ID @unique
+}
+`
+
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N7GUM99ZAU738)
 
 This extension for StarUML(http://staruml.io) supports the generation of GraphQL IDL schemas from UML models. 
