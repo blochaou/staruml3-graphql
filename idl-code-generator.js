@@ -604,14 +604,15 @@ class IDLCodeGenerator {
       // This part of code is modify Blochaou Francois to remove
       // parentesis when the is no value of the tag. This is motivated
       // my the @unique directive of Prisma that does not need parentesis
+      // if the value is --empty i remove parentesis
       const _tags = elem.tags;
       if (_tags) {
         for (i = 0, len = _tags.length; i < len; i++) {
           e = _tags[i];
-          if(e.value){
-            terms.push(" @" + e.name + "(" + e.value + ")");
-          }else{
+          if(e.value === '--empty'){
             terms.push(" @" + e.name);
+          }else{
+            terms.push(" @" + e.name + "(" + e.value + ")");
           }
           
         }
