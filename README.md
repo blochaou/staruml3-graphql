@@ -8,13 +8,11 @@ parameter. You will get for example @unique instead @unique(). Please set the va
 
 This will genegrated
 
-`
-
+```
 type Client{
     id: ID @unique
 }
-
-`
+```
 
 Thank to Orefalo
 
