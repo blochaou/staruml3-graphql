@@ -1,6 +1,6 @@
 {
-  "id": "graphql",
-  "name": "GraphQL",
+  "id": "graphql-prisma",
+  "name": "GraphQL-Prisma",
   "schema": {
     "graphql.gen": {
       "text": "GraphQL Code Generation",
