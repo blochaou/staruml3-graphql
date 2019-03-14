@@ -601,11 +601,19 @@ class IDLCodeGenerator {
       }
 
       // graphql visual directives - modeled as Tags
+      // This part of code is modify Blochaou Francois to remove
+      // parentesis when the is no value of the tag. This is motivated
+      // my the @unique directive of Prisma that does not need parentesis
       const _tags = elem.tags;
       if (_tags) {
         for (i = 0, len = _tags.length; i < len; i++) {
           e = _tags[i];
-          terms.push(" @" + e.name + "(" + e.value + ")");
+          if(e.value){
+            terms.push(" @" + e.name + "(" + e.value + ")");
+          }else{
+            terms.push(" @" + e.name);
+          }
+          
         }
       }
 
